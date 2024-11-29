@@ -1,18 +1,53 @@
+---
+import NavBar from "../components/NavBar.astro";
+const { title } = Astro.props;
+const { active } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+		<title>{title} - Planify</title>
 	</head>
 	<body>
+		<NavBar active={active}/>
 		<slot />
 	</body>
 </html>
 
 <style>
+	:root {
+		--principal-color: #297169;
+		color-scheme: light dark;
+
+		@media (prefers-color-scheme: light) {
+			--bg-color: white;
+			--text-color: black;
+			--unselected-text-color: rgb(107 114 128);
+			--unselected-text-color-hover: rgb(55 65 81);
+			--navbar-bg: rgb(255, 255, 255);
+			body {
+				background-color: var(--bg-color);
+				color: var(--text-color);
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+			--bg-color: rgb(50, 50, 50);
+			--text-color: white;
+			--unselected-text-color: rgb(189, 189, 189);
+			--unselected-text-color-hover: rgb(165, 165, 165);
+			--navbar-bg: rgba(0, 0, 0, 0.7);
+			body {
+				background-color: var(--bg-color);
+				color: var(--text-color);
+			}
+		}
+	}
+
 	html,
 	body {
 		margin: 0;
