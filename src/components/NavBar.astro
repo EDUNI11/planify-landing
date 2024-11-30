@@ -1,12 +1,11 @@
 ---
 const { active } = Astro.props;
-let className;
 ---
 
-<nav class="w-full flex justify-between gap-x-4 py-4 px-6 bg-[--navbar-bg] shadow-md">
+<nav class="navbar w-full flex justify-between gap-x-4 py-4 px-6 bg-[--navbar-bg] shadow-md">
     <div class="flex items-center gap-x-8">
         <a href="/" class="text-2xl font-bold">
-            <img alt="Planify Logo" title="Planify" src="/img/planify-text-logo.webp" class="w-24 h-auto" />
+            <img class="w-24 h-auto text-[--principal-color]" alt="Planify Logo" title="Planify" src="/img/planify-text-logo.svg"/>
         </a>
         <a
                 href="/"
@@ -29,7 +28,7 @@ let className;
             Documentación
         </a>
     </div>
-    <a href="/register" class="text-[--text-color] bg-[#297169]/60 border-2 border-black/20 px-4 py-2 rounded-md hover:bg-[--principal-color] transition-all duration-[.4s]">
+    <a href="/register" class="text-black hover:text-white dark:text-white bg-[#297169]/60 border-black/20 px-4 py-2 rounded-md hover:bg-[--principal-color] transition-all duration-[.4s]">
         Registrarse
     </a>
 
