@@ -18,32 +18,68 @@ const { active } = Astro.props;
 	</body>
 </html>
 
+<script>
+	const navbar = document.querySelector('.navbar');
+
+	window.addEventListener('scroll', () => {
+		const scrollY = window.scrollY;
+		const start = 0;
+		const end = 300;
+		const progress = Math.min(Math.max((scrollY - start) / (end - start), 0), 1);
+
+		navbar.style.backdropFilter = `blur(${4 * progress}px)`;
+	});
+</script>
+
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Parkinsans:wght@300..800&display=swap');
 	:root {
+		font-family: 'Parkinsans', sans-serif, system-ui;
 		--principal-color: #297169;
 		color-scheme: light dark;
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Bebas Neue' , sans-serif, system-ui;
+			letter-spacing: 10px;
+		}
+
+		p {
+			margin-bottom: 1rem;
+			color: var(--text-color);
+		}
+
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+			background-color: var(--navbar-bg);
+			z-index: 1000;
+		}
+
+		--accent-color: #4A90E2;
 
 		@media (prefers-color-scheme: light) {
 			--bg-color: white;
 			--text-color: black;
+			--subtitles-color: #A5A5A5;
 			--unselected-text-color: rgb(107 114 128);
 			--unselected-text-color-hover: rgb(55 65 81);
-			--navbar-bg: rgb(255, 255, 255);
+			--navbar-bg: rgba(255, 255, 255, 0.65);
 			body {
 				background-color: var(--bg-color);
-				color: var(--text-color);
 			}
 		}
 
 		@media (prefers-color-scheme: dark) {
-			--bg-color: rgb(50, 50, 50);
-			--text-color: white;
+			--bg-color: #1A1A1A;
+			--text-color: #E8E8E8;
+			--subtitles-color: #A5A5A5;
 			--unselected-text-color: rgb(189, 189, 189);
 			--unselected-text-color-hover: rgb(165, 165, 165);
-			--navbar-bg: rgba(0, 0, 0, 0.7);
+			--navbar-bg: rgba(37, 37, 37, 0.65);
 			body {
 				background-color: var(--bg-color);
-				color: var(--text-color);
 			}
 		}
 	}
