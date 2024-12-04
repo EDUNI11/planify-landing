@@ -19,7 +19,7 @@ const { active } = Astro.props;
 </html>
 
 <script>
-	const navbar = document.querySelector('.navbar');
+	const navbar = document.querySelector('.navbar') as HTMLElement;
 
 	window.addEventListener('scroll', () => {
 		const scrollY = window.scrollY;
@@ -27,7 +27,9 @@ const { active } = Astro.props;
 		const end = 300;
 		const progress = Math.min(Math.max((scrollY - start) / (end - start), 0), 1);
 
-		navbar.style.backdropFilter = `blur(${4 * progress}px)`;
+		if (navbar) {
+			navbar.style.backdropFilter = `blur(${4 * progress}px)`;
+		}
 	});
 </script>
 
