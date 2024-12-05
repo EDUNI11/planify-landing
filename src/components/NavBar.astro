@@ -13,12 +13,12 @@ const { active } = Astro.props;
                 class={`${
                     active === "home"
                         ? "text-[--text-color] hidden md:block cursor-not-allowed pointer-events-none transition"
-                        : "text-[--unselected-text-color] hidden md:block hover:text-emerald-400 relative group transition"
+                        : "text-[--unselected-text-color] hidden md:block hover:text-[--principal-color] relative group transition"
                 }`}
         >
             Inicio
             <span
-                    class="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"
+                    class="absolute left-0 bottom-0 w-0 h-0.5 bg-[--principal-color] transition-all duration-300 group-hover:w-full"
             ></span>
         </a>
         <a
@@ -26,12 +26,12 @@ const { active } = Astro.props;
                 class={`${
                     active === "documentation"
                         ? "text-[--text-color] hidden md:block cursor-not-allowed pointer-events-none transition"
-                        : "text-[--unselected-text-color] hidden md:block hover:text-emerald-400 relative group transition"
+                        : "text-[--unselected-text-color] hidden md:block hover:text-[--principal-color] relative group transition"
                 }`}
         >
             Documentación
             <span
-                    class="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"
+                    class="absolute left-0 bottom-0 w-0 h-0.5 bg-[--principal-color] transition-all duration-300 group-hover:w-full"
             ></span>
         </a>
     </div>
@@ -64,7 +64,7 @@ const { active } = Astro.props;
             class={`${
                 active === "home"
                     ? "gap-x-2 inline-flex text-[--text-color] cursor-not-allowed pointer-events-none transition"
-                    : "gap-x-2 inline-flex text-[--unselected-text-color] hover:text-emerald-400 transition"
+                    : "gap-x-2 inline-flex text-[--unselected-text-color]"
             }`}
     >
         <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -79,7 +79,7 @@ const { active } = Astro.props;
             class={`${
                 active === "documentation"
                     ? "gap-x-2 inline-flex text-[--text-color] cursor-not-allowed pointer-events-none transition"
-                    : "gap-x-2 inline-flex text-[--unselected-text-color] hover:text-emerald-400 transition"
+                    : "gap-x-2 inline-flex text-[--unselected-text-color]"
             }`}
     >
         <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
