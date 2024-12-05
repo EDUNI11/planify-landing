@@ -37,16 +37,26 @@ const { active } = Astro.props;
 	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Parkinsans:wght@300..800&display=swap');
 	:root {
 		font-family: 'Parkinsans', sans-serif, system-ui;
-		--principal-color: #297169;
+
 		color-scheme: light dark;
 
-		h1, h2, h3, h4, h5, h6 {
-			font-family: 'Bebas Neue' , sans-serif, system-ui;
-			letter-spacing: 10px;
+		h1, h2 {
+			font-family: 'Bebas Neue', sans-serif, system-ui;
+			letter-spacing: 0.15em;
+			font-weight: 400;
+			color: var(--heading-color);
+		}
+
+		h3, h4, h5, h6 {
+			font-family: 'Bebas Neue', sans-serif, system-ui;
+			font-weight: 400;
+			color: var(--subtitle-color);
+			letter-spacing: 0.1em;
 		}
 
 		p {
 			margin-bottom: 1rem;
+			line-height: 1.6;
 			color: var(--text-color);
 		}
 
@@ -56,35 +66,42 @@ const { active } = Astro.props;
 			left: 0;
 			transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
 			background-color: var(--navbar-bg);
+			backdrop-filter: blur(10px);
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 			z-index: 1000;
 		}
 
-		--accent-color: #4A90E2;
-
 		@media (prefers-color-scheme: light) {
+			--principal-color: #297169;
+			--accent-color: #70B9F3;
 			--bg-color: white;
 			--text-color: black;
-			--subtitles-color: #A5A5A5;
-			--unselected-text-color: rgb(107 114 128);
-			--unselected-text-color-hover: rgb(55 65 81);
+			--subtitle-color: #6B7280;
+			--unselected-text-color: rgb(99, 99, 99);
+			--unselected-text-color-hover: rgb(39, 39, 39);
 			--navbar-bg: rgba(255, 255, 255, 0.65);
+			--heading-color: #297169;
 			body {
 				background-color: var(--bg-color);
 			}
 		}
 
 		@media (prefers-color-scheme: dark) {
+			--principal-color: #3BAF94;
+			--accent-color: #217AB8;
 			--bg-color: #1A1A1A;
 			--text-color: #E8E8E8;
-			--subtitles-color: #A5A5A5;
-			--unselected-text-color: rgb(189, 189, 189);
-			--unselected-text-color-hover: rgb(165, 165, 165);
-			--navbar-bg: rgba(37, 37, 37, 0.65);
+			--subtitle-color: #A5A5A5;
+			--unselected-text-color: rgb(200, 200, 200);
+			--unselected-text-color-hover: rgb(230, 230, 230);
+			--navbar-bg: rgba(37, 37, 37, 0.85);
+			--heading-color: #4A90E2;
 			body {
 				background-color: var(--bg-color);
 			}
 		}
 	}
+
 
 	html,
 	body {
