@@ -36,7 +36,7 @@ const { active } = Astro.props;
         </a>
     </div>
     <a
-            href="/register"
+            href="https://planify.eduni.dev/register"
             class="text-black hidden md:block dark:text-white bg-[--principal-color]/60 border border-black/20 dark:border-white/20 px-4 py-2 rounded-md hover:bg-[--principal-color] hover:text-white transition-all duration-[.4s]"
     >
         Registrarse
@@ -44,42 +44,77 @@ const { active } = Astro.props;
 
     <div class="md:hidden">
         <button id="menu-btn" class="text-[--text-color] focus:outline-none">
-            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <svg id="burger-icon" class="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M4 6l16 0"></path>
+                <path d="M4 12l16 0"></path>
+                <path d="M4 18l16 0"></path>
+            </svg>
+            <svg id="cross-icon" class="size-8 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
             </svg>
         </button>
     </div>
 
 </nav>
 
-<div id="menu" class="hidden w-[70%] lg:hidden h-full bg-[--navbar-bg] backdrop-blur-md p-6 fixed mt-14 left-0 flex flex-col space-y-4">
+<div id="menu" class="hidden right-0 ml-[30%] w-[70%] lg:hidden h-full bg-[--navbar-bg] backdrop-blur-md p-6 fixed mt-14 left-0 flex flex-col space-y-4">
     <a
             href="/"
             class={`${
                 active === "home"
-                    ? "text-[--text-color] cursor-not-allowed pointer-events-none transition"
-                    : "text-[--unselected-text-color] hover:text-emerald-400 transition"
+                    ? "gap-x-2 inline-flex text-[--text-color] cursor-not-allowed pointer-events-none transition"
+                    : "gap-x-2 inline-flex text-[--unselected-text-color] hover:text-emerald-400 transition"
             }`}
     >
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+        </svg>
         Inicio
     </a>
     <a
             href="/docs"
             class={`${
                 active === "documentation"
-                    ? "text-[--text-color] cursor-not-allowed pointer-events-none transition"
-                    : "text-[--unselected-text-color] hover:text-emerald-400 transition"
+                    ? "gap-x-2 inline-flex text-[--text-color] cursor-not-allowed pointer-events-none transition"
+                    : "gap-x-2 inline-flex text-[--unselected-text-color] hover:text-emerald-400 transition"
             }`}
     >
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18"></path>
+            <path d="M13 8l2 0"></path>
+            <path d="M13 12l2 0"></path>
+        </svg>
         Documentación
+    </a>
+    <hr class="pb-5 border-black/50 dark:border-white/50 w-full"/>
+    <a
+            href="https://planify.eduni.dev/register"
+            class="gap-x-2 inline-flex text-black dark:text-white bg-[--principal-color]/60"
+    >
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+            <path d="M16 19h6"></path>
+            <path d="M19 16v6"></path>
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+        </svg>
+        Registrarse
     </a>
 </div>
 
 <script>
+    const body = document.getElementsByTagName('body')[0];
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
+    const crossIcon = document.getElementById('cross-icon');
+    const burgerIcon = document.getElementById('burger-icon');
 
     menuBtn?.addEventListener('click', () => {
         menu?.classList.toggle('hidden');
+        body?.classList.toggle('overflow-hidden');
+        crossIcon?.classList.toggle('hidden');
+        burgerIcon?.classList.toggle('hidden');
     });
 </script>
