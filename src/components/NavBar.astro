@@ -1,35 +1,85 @@
 ---
+import PlanifyTextLogo from "./PlanifyTextLogo.astro";
 const { active } = Astro.props;
 ---
 
-<nav class="navbar w-full flex justify-between gap-x-4 py-4 px-6 bg-[--navbar-bg] shadow-md">
+<nav class="navbar w-full flex justify-between gap-x-4 py-4 px-6 bg-[--navbar-bg] backdrop-blur-lg shadow-md">
     <div class="flex items-center gap-x-8">
-        <a href="/" class="text-2xl font-bold">
-            <img class="w-24 h-auto text-[--principal-color]" alt="Planify Logo" title="Planify" src="/img/planify-text-logo.svg"/>
+        <a href="/" class="text-2xl text-[--principal-color]">
+            <PlanifyTextLogo className="w-24 h-auto"/>
         </a>
         <a
                 href="/"
                 class={`${
                     active === "home"
-                        ? "text-[--text-color] cursor-not-allowed pointer-events-none"
-                        : "text-[--unselected-text-color] hover:text-[--unselected-text-color-hover]"
+                        ? "text-[--text-color] hidden md:block cursor-not-allowed pointer-events-none transition"
+                        : "text-[--unselected-text-color] hidden md:block hover:text-emerald-400 relative group transition"
                 }`}
         >
             Inicio
+            <span
+                    class="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"
+            ></span>
         </a>
         <a
                 href="/docs"
                 class={`${
                     active === "documentation"
-                        ? "text-[--text-color] cursor-not-allowed pointer-events-none"
-                        : "text-[--unselected-text-color] hover:text-[--unselected-text-color-hover]"
+                        ? "text-[--text-color] hidden md:block cursor-not-allowed pointer-events-none transition"
+                        : "text-[--unselected-text-color] hidden md:block hover:text-emerald-400 relative group transition"
                 }`}
         >
             Documentación
+            <span
+                    class="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"
+            ></span>
         </a>
     </div>
-    <a href="/register" class="text-black hover:text-white dark:text-white bg-[#297169]/60 border-black/20 px-4 py-2 rounded-md hover:bg-[--principal-color] transition-all duration-[.4s]">
+    <a
+            href="/register"
+            class="text-black hidden md:block dark:text-white bg-[--principal-color]/60 border border-black/20 dark:border-white/20 px-4 py-2 rounded-md hover:bg-[--principal-color] hover:text-white transition-all duration-[.4s]"
+    >
         Registrarse
     </a>
 
+    <div class="md:hidden">
+        <button id="menu-btn" class="text-[--text-color] focus:outline-none">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+
 </nav>
+
+<div id="menu" class="hidden w-[70%] lg:hidden h-full bg-[--navbar-bg] backdrop-blur-md p-6 fixed mt-14 left-0 flex flex-col space-y-4">
+    <a
+            href="/"
+            class={`${
+                active === "home"
+                    ? "text-[--text-color] cursor-not-allowed pointer-events-none transition"
+                    : "text-[--unselected-text-color] hover:text-emerald-400 transition"
+            }`}
+    >
+        Inicio
+    </a>
+    <a
+            href="/docs"
+            class={`${
+                active === "documentation"
+                    ? "text-[--text-color] cursor-not-allowed pointer-events-none transition"
+                    : "text-[--unselected-text-color] hover:text-emerald-400 transition"
+            }`}
+    >
+        Documentación
+    </a>
+</div>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+    });
+</script>
