@@ -4,81 +4,82 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout title="Inicio" active="home">
-    <Header/>
-    <div class="max-w-[90%] md:max-w-[75%] mx-auto text-center mt-20 justify-center items-center">
-        <h1 class="text-3xl md:text-5xl mt-10 uppercase text-[--accent-color]">Planifica tus reuniones y viajes en grupo de forma simple y organizada.</h1>
-    </div>
-    <div class="max-w-[90%] md:max-w-[55%] mx-auto">
-        <h3 class="text-xl md:text-3xl text-center mt-12 text-[--subtitles-color]">Con Planify, organiza actividades, divide gastos y explora nuevas opciones, todo en un solo lugar.</h3>
-    </div>
-    <div class="mx-auto gap-x-5 flex flex-col md:flex-row w-[90%] md:w-[45%] mt-8 justify-center items-center text-sm md:text-base">
-        <img class="mx-auto w-full md:w-[50%] h-auto" src="/img/movil-planify.png" alt="Planify Logo"/>
-
-        <div class="w-full md:w-[50%] mt-10 md:mt-0">
-            <p><strong class="text-[--accent-color]">Desde el equipo de Planify</strong>, nos esforzamos por ofrecer una plataforma de planificación que sea <strong class="text-[--accent-color]">fácil de usar</strong>
-                y que permita a los usuarios <strong class="text-[--accent-color]">planificar sus actividades con facilidad.</strong></p>
-            <p>Con Planify, puedes <strong class="text-[--accent-color]">planificar tus actividades, gestionar tus gastos y ahorrar dinero</strong> en todo momento.
-                <strong class="text-[--accent-color]">¡Empieza a planificar hoy mismo!</strong></p>
+    <header>
+        <Header/>
+        <div class="max-w-[90%] md:max-w-[75%] mx-auto text-center mt-20 justify-center items-center">
+            <h1 class="text-3xl md:text-5xl mt-10 uppercase text-[--accent-color]">Planifica tus reuniones y viajes en grupo de forma simple y organizada.</h1>
         </div>
-    </div>
-    <div class="max-w-[90%] md:max-w-[55%] mx-auto pb-40 mt-8 md:mt-16 text-[--text-color] text-sm md:text-base">
+        <div class="max-w-[90%] md:max-w-[55%] mx-auto">
+            <h3 class="text-xl md:text-3xl text-center mt-12 text-[--subtitles-color]">Con Planify, organiza actividades, divide gastos y explora nuevas opciones, todo en un solo lugar.</h3>
+        </div>
+        <section class="mx-auto gap-x-5 flex flex-col md:flex-row w-[90%] md:w-[45%] mt-8 justify-center items-center text-sm md:text-base">
+            <img class="mx-auto w-full md:w-[50%] h-auto" src="/img/movil-planify.png" alt="Planify Logo"/>
+
+            <div class="w-full md:w-[50%] mt-10 md:mt-0">
+                <p><strong class="text-[--accent-color]">Desde el equipo de Planify</strong>, nos esforzamos por ofrecer una plataforma de planificación que sea <strong class="text-[--accent-color]">fácil de usar</strong>
+                    y que permita a los usuarios <strong class="text-[--accent-color]">planificar sus actividades con facilidad.</strong></p>
+                <p>Con Planify, puedes <strong class="text-[--accent-color]">planificar tus actividades, gestionar tus gastos y ahorrar dinero</strong> en todo momento.
+                    <strong class="text-[--accent-color]">¡Empieza a planificar hoy mismo!</strong></p>
+            </div>
+        </section>
+    </header>
+
+    <main class="max-w-[90%] md:max-w-[55%] mx-auto pb-40 mt-8 md:mt-16 text-[--text-color] text-sm md:text-base">
         <h3 class="text-xl md:text-3xl text-[--subtitles-color] mb-6">¿Por qué elegir Planify?</h3>
-        <p class="mt-5 pl-2 md:pl-8">La herramienta definitiva para organizar y disfrutar tus planes en grupo.</p>
+        <p class="mt-5 pl-2 md:pl-8">La herramienta definitiva para <strong class="text-[--accent-color]">organizar y disfrutar tus planes en grupo</strong>.</p>
         <ul class="pl-7 md:pl-20 list-inside mt-5 flex flex-col gap-y-4">
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4.5"></path>
                 <path d="M16 3v4"></path>
                 <path d="M8 3v4"></path>
                 <path d="M4 11h16"></path>
                 <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
                 <path d="M20.2 20.2l1.8 1.8"></path>
-            </svg>Organización fácil con calendario y eventos grupales.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg>Organización fácil con <strong class="text-[--accent-color]">calendario y eventos grupales</strong>.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
                 <path d="M13 17h-7v-14h-2"></path>
                 <path d="M6 5l14 1l-.575 4.022m-4.925 2.978h-8.5"></path>
                 <path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path>
                 <path d="M19 21v1m0 -8v1"></path>
-            </svg>Gestión de gastos y compras con un sistema de presupuesto.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg><strong class="text-[--accent-color]">Gestión de gastos</strong> y compras con un sistema de presupuesto.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M14.5 6.5l3 -2.9a2.05 2.05 0 0 1 2.9 2.9l-2.9 3l2.5 7.5l-2.5 2.55l-3.5 -6.55l-3 3v3l-2 2l-1.5 -4.5l-4.5 -1.5l2 -2h3l3 -3l-6.5 -3.5l2.5 -2.5l7.5 2.5z"></path>
-            </svg>Planificación de viajes y reuniones.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg>Planificación de<strong class="text-[--accent-color]"> viajes y reuniones</strong>.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
                 <path d="M12 14h-3"></path>
                 <path d="M14 11.172a3 3 0 1 0 0 5.656"></path>
-            </svg>División de gastos equitativa o personalizada.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg><strong class="text-[--accent-color]">División de gastos</strong> equitativa o personalizada.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M8 9h8"></path>
                 <path d="M8 13h6"></path>
                 <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"></path>
-            </svg>Comunicación fluida con chat integrado.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg>Comunicación fluida con <strong class="text-[--accent-color]">chat integrado</strong>.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5"></path>
                 <path d="M9 4v13"></path>
                 <path d="M15 7v5.5"></path>
                 <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z"></path>
                 <path d="M19 18v.01"></path>
-            </svg>Mapa interactivo para puntos de encuentro.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg><strong class="text-[--accent-color]">Mapa interactivo</strong> para puntos de encuentro.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"></path>
                 <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"></path>
                 <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"></path>
                 <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"></path>
                 <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"></path>
                 <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"></path>
-            </svg>Inteligencia artificial para recomendaciones turísticas.</li>
-            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </svg>Inteligencia artificial para <strong class="text-[--accent-color]">recomendaciones turísticas</strong>.</li>
+            <li class="inline-flex gap-x-2"><svg class="md:size-5 size-9 text-[--principal-color]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M15 8h.01"></path>
                 <path d="M10 21h-4a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5"></path>
                 <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l1 1"></path>
                 <path d="M14 21v-4a2 2 0 1 1 4 0v4"></path>
                 <path d="M14 19h4"></path>
                 <path d="M21 15v6"></path>
-            </svg>Gestión de gastos con tickets e imágenes.</li>
+            </svg><strong class="text-[--accent-color]">Gestión de gastos</strong> con tickets e imágenes.</li>
         </ul>
-    </div>
-
-
+    </main>
 </Layout>
