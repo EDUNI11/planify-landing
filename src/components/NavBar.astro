@@ -1,5 +1,6 @@
 ---
 import PlanifyTextLogo from "./PlanifyTextLogo.astro";
+import Button from "./Button.astro";
 const { active } = Astro.props;
 ---
 
@@ -35,12 +36,7 @@ const { active } = Astro.props;
             ></span>
         </a>
     </div>
-    <a
-            href="https://planify.eduni.dev/register"
-            class="text-black hidden md:block dark:text-white bg-[--principal-color]/60 border border-black/20 dark:border-white/20 px-4 py-2 rounded-md hover:bg-[--principal-color] hover:text-white transition-all duration-[.4s]"
-    >
-        Registrarse
-    </a>
+    <Button href="https://planify.eduni.dev/register">Registrarse</Button>
 
     <div class="md:hidden">
         <button id="menu-btn" class="text-[--text-color] focus:outline-none">
