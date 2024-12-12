@@ -1,6 +1,6 @@
 ---
 const href = Astro.props.href;
-const width = Astro.props.width;
+const width = Astro.props.width ? Astro.props.width : "px-4 py-2";
 const textSize = Astro.props.textSize ? Astro.props.textSize : "";
 ---
 
