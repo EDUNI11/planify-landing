@@ -1,8 +1,112 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import DocsNavMenu from "../components/DocsNavMenu.astro";
+
+const sections = [
+    {
+        title: "Inicio rápido",
+        link: "/docs/getting-started"
+    },
+    {
+        title: "Instalación",
+        link: "/docs/installation"
+    },
+    {
+        title: "Guía de Uso",
+        link: "/docs/usage"
+    },
+    {
+        title: "Configuración",
+        link: "/docs/configuration"
+    },
+    {
+        title: "Personalización del diseño",
+        link: "/docs/theming"
+    },
+    {
+        title: "API",
+        link: "/docs/api"
+    },
+    {
+        title: "Seguridad",
+        link: "/docs/security"
+    },
+    {
+        title: "Soporte",
+        link: "/docs/support"
+    },
+    {
+        title: "Preguntas Frecuentes (FAQ)",
+        link: "/docs/faq"
+    },
+    {
+        title: "Casos de uso",
+        link: "/docs/use-cases"
+    },
+    {
+        title: "Tutoriales paso a paso",
+        link: "/docs/tutorials"
+    },
+    {
+        title: "Guía de buenas prácticas",
+        link: "/docs/best-practices"
+    },
+    {
+        title: "Hoja de ruta",
+        link: "/docs/roadmap"
+    },
+    {
+        title: "Changelog",
+        link: "/docs/changelog"
+    },
+    {
+        title: "Licencias",
+        link: "/docs/license"
+    },
+    {
+        title: "Términos y Condiciones",
+        link: "/docs/terms"
+    },
+    {
+        title: "Privacidad",
+        link: "/docs/privacy"
+    },
+    {
+        title: "Código de Conducta",
+        link: "/docs/code-of-conduct"
+    },
+    {
+        title: "Cómo contribuir",
+        link: "/docs/contributing"
+    },
+    {
+        title: "Patrocinadores",
+        link: "/docs/sponsors"
+    },
+    {
+        title: "Donaciones",
+        link: "/docs/donations"
+    },
+    {
+        title: "Reconocimientos",
+        link: "/docs/acknowledgments"
+    },
+    {
+        title: "Traducciones",
+        link: "/docs/translations"
+    },
+    {
+        title: "Descargo de responsabilidad",
+        link: "/docs/disclaimer"
+    },
+    {
+        title: "Marca registrada",
+        link: "/docs/trademark"
+    }
+];
 
 ---
 
 <Layout title="Documentación" active="documentation">
-
+    <DocsNavMenu sections={sections} />
 </Layout>
