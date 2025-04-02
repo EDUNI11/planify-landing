@@ -4,7 +4,7 @@ import Button from "./Button.astro";
 const { active } = Astro.props;
 ---
 
-<nav class="navbar w-full flex justify-between gap-x-4 py-4 px-6 bg-[--navbar-bg] backdrop-blur-lg shadow-md">
+<nav class="navbar fixed w-full flex justify-between gap-x-4 py-4 px-6 bg-[--navbar-bg] backdrop-blur-lg shadow-md">
     <div class="flex items-center gap-x-8">
         <a href="/" class="text-2xl text-[--principal-color]">
             <PlannifyTextLogo className="w-24 h-auto"/>
@@ -36,7 +36,7 @@ const { active } = Astro.props;
             ></span>
         </a>
     </div>
-    <Button href="https://planify.eduni.dev/register">Registrarse</Button>
+    <Button href="https://plannify.es/Register">Registrarse</Button>
 
     <div class="md:hidden">
         <button id="menu-btn" class="text-[--text-color] focus:outline-none">
@@ -54,7 +54,7 @@ const { active } = Astro.props;
 
 </nav>
 
-<main id="menu" class="hidden right-0 ml-[30%] w-[70%] lg:hidden h-full bg-[--navbar-bg] backdrop-blur-md p-6 fixed mt-14 left-0 flex flex-col space-y-4">
+<article id="menu" class="hidden right-0 ml-[30%] w-[70%] lg:hidden h-full bg-[--navbar-bg] backdrop-blur-md p-6 fixed mt-14 left-0 flex flex-col space-y-4">
     <a
             href="/"
             class={`${
@@ -98,7 +98,7 @@ const { active } = Astro.props;
         </svg>
         Registrarse
     </a>
-</main>
+</article>
 
 <script>
     const body = document.getElementsByTagName('body')[0];
