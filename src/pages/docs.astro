@@ -1,112 +1,246 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import DocsNavMenu from "../components/DocsNavMenu.astro";
-
-const sections = [
-    {
-        title: "Inicio rápido",
-        link: "/docs/getting-started"
-    },
-    {
-        title: "Instalación",
-        link: "/docs/installation"
-    },
-    {
-        title: "Guía de Uso",
-        link: "/docs/usage"
-    },
-    {
-        title: "Configuración",
-        link: "/docs/configuration"
-    },
-    {
-        title: "Personalización del diseño",
-        link: "/docs/theming"
-    },
-    {
-        title: "API",
-        link: "/docs/api"
-    },
-    {
-        title: "Seguridad",
-        link: "/docs/security"
-    },
-    {
-        title: "Soporte",
-        link: "/docs/support"
-    },
-    {
-        title: "Preguntas Frecuentes (FAQ)",
-        link: "/docs/faq"
-    },
-    {
-        title: "Casos de uso",
-        link: "/docs/use-cases"
-    },
-    {
-        title: "Tutoriales paso a paso",
-        link: "/docs/tutorials"
-    },
-    {
-        title: "Guía de buenas prácticas",
-        link: "/docs/best-practices"
-    },
-    {
-        title: "Hoja de ruta",
-        link: "/docs/roadmap"
-    },
-    {
-        title: "Changelog",
-        link: "/docs/changelog"
-    },
-    {
-        title: "Licencias",
-        link: "/docs/license"
-    },
-    {
-        title: "Términos y Condiciones",
-        link: "/docs/terms"
-    },
-    {
-        title: "Privacidad",
-        link: "/docs/privacy"
-    },
-    {
-        title: "Código de Conducta",
-        link: "/docs/code-of-conduct"
-    },
-    {
-        title: "Cómo contribuir",
-        link: "/docs/contributing"
-    },
-    {
-        title: "Patrocinadores",
-        link: "/docs/sponsors"
-    },
-    {
-        title: "Donaciones",
-        link: "/docs/donations"
-    },
-    {
-        title: "Reconocimientos",
-        link: "/docs/acknowledgments"
-    },
-    {
-        title: "Traducciones",
-        link: "/docs/translations"
-    },
-    {
-        title: "Descargo de responsabilidad",
-        link: "/docs/disclaimer"
-    },
-    {
-        title: "Marca registrada",
-        link: "/docs/trademark"
-    }
-];
-
+import DocsLayout from "../layouts/DocsLayout.astro";
 ---
 
-<Layout title="Documentación" active="documentation">
-    <DocsNavMenu sections={sections} />
-</Layout>
+<DocsLayout>
+    <main class="ml-64 p-4 w-full">
+        <section id="introduccion" class="mb-12 scroll-mt-20">
+            <h1 class="text-3xl font-bold mb-4">Inicio rápido</h1>
+            <p>
+                Bienvenido a la documentación de Plannify, la aplicación móvil diseñada para ayudarte a planificar tus actividades de manera efectiva. Este apartado te guiará a través de un rápido inicio para que puedas comenzar a utilizar Plannify sin complicaciones.
+            </p>
+            <ol class="list-decimal list-inside mt-4">
+                <li>Descarga e instala la aplicación en tu dispositivo móvil.</li>
+                <li>Regístrate o inicia sesión con tus credenciales.</li>
+                <li>Configura tus preferencias y empieza a crear tus planes.</li>
+                <li>Explora las funciones adicionales desde el menú de la aplicación.</li>
+            </ol>
+        </section>
+
+        <section id="instalacion" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Instalación</h2>
+            <p>
+                Para instalar Plannify, sigue estos pasos:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Visita la tienda de aplicaciones correspondiente (App Store para iOS o Google Play Store para Android).</li>
+                <li>Busca "Plannify" en la barra de búsqueda.</li>
+                <li>Descarga e instala la aplicación en tu dispositivo.</li>
+                <li>Una vez instalada, abre la aplicación y sigue las instrucciones en pantalla para registrarte o iniciar sesión.</li>
+            </ul>
+        </section>
+
+        <section id="usage" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Guía de Uso</h2>
+            <p>
+                Conoce las principales funcionalidades de Plannify para aprovechar al máximo la aplicación:
+            </p>
+            <h3 class="text-xl font-bold mt-4">Creación de Planes</h3>
+            <p>
+                Pulsa el botón “Nuevo Plan” y rellena la información requerida, como fecha, hora y descripción. Puedes añadir recordatorios y establecer prioridades.
+            </p>
+            <h3 class="text-xl font-bold mt-4">Gestión de Tareas</h3>
+            <p>
+                Organiza tus actividades diarias, marca tareas completadas y reordena la lista de acuerdo a tus necesidades.
+            </p>
+            <h3 class="text-xl font-bold mt-4">Notificaciones</h3>
+            <p>
+                Configura notificaciones para recibir alertas sobre tus planes y tareas. Accede a los ajustes para personalizar cuándo y cómo deseas recibir estas notificaciones.
+            </p>
+        </section>
+
+        <section id="configuration" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Configuración</h2>
+            <p>
+                Plannify ofrece diversas opciones de configuración para personalizar la experiencia:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>Preferencias de Notificación:</strong> Ajusta la frecuencia y el método de las alertas.</li>
+                <li><strong>Temas y Apariencia:</strong> Selecciona entre temas claros y oscuros y personaliza los colores y fuentes.</li>
+                <li><strong>Sincronización en la Nube:</strong> Habilita la sincronización para respaldar tus datos y acceder desde múltiples dispositivos.</li>
+            </ul>
+        </section>
+
+        <section id="support" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Soporte</h2>
+            <p>
+                Si necesitas ayuda o tienes alguna duda, Plannify pone a tu disposición varios canales de soporte:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>Centro de Ayuda:</strong> Consulta la sección de ayuda dentro de la aplicación o en nuestro sitio web.</li>
+                <li><strong>Contacto Directo:</strong> Escríbenos a <a href="mailto:support@plannify.es" class="text-blue-600 hover:underline">support@plannify.es</a>.</li>
+                <li><strong>Comunidad:</strong> Participa en nuestros foros y redes sociales para compartir experiencias y resolver dudas.</li>
+            </ul>
+        </section>
+
+        <section id="faq" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Preguntas Frecuentes (FAQ)</h2>
+            <p>
+                A continuación, respondemos algunas de las preguntas más comunes:
+            </p>
+            <dl class="mt-4 space-y-4">
+                <dt class="font-bold">¿Es Plannify gratuito?</dt>
+                <dd>Sí, Plannify ofrece una versión gratuita con funcionalidades básicas, además de opciones premium para características avanzadas.</dd>
+                <dt class="font-bold">¿Puedo sincronizar mis datos entre dispositivos?</dt>
+                <dd>Sí, la sincronización en la nube permite que tus planes se actualicen en todos tus dispositivos registrados.</dd>
+                <dt class="font-bold">¿Cómo puedo restablecer mi contraseña?</dt>
+                <dd>Utiliza la opción "Olvidé mi contraseña" en la pantalla de inicio de sesión para recibir instrucciones por correo electrónico.</dd>
+            </dl>
+        </section>
+
+        <section id="roadmap" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Hoja de ruta</h2>
+            <p>
+                Nuestra hoja de ruta refleja las mejoras y nuevas funcionalidades previstas para Plannify:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>Integración con Calendarios:</strong> Sincronización con Google Calendar, Outlook y otras plataformas.</li>
+                <li><strong>Mejoras en la Interfaz:</strong> Actualizaciones de diseño para mejorar la experiencia del usuario.</li>
+                <li><strong>Nuevas Funcionalidades Premium:</strong> Características avanzadas para usuarios que requieran mayor personalización.</li>
+            </ul>
+        </section>
+
+        <section id="changelog" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Changelog</h2>
+            <p>
+                En esta sección se registran las actualizaciones y cambios de cada versión de Plannify:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>v1.2.0:</strong> Mejoras en la sincronización y nuevas opciones de personalización.</li>
+                <li><strong>v1.1.0:</strong> Implementación de notificaciones push y correcciones de errores menores.</li>
+                <li><strong>v1.0.0:</strong> Lanzamiento inicial de la aplicación con funcionalidades básicas.</li>
+            </ul>
+        </section>
+
+        <section id="licenses" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Licéncias</h2>
+            <p>
+                Plannify se distribuye bajo licencias de código abierto y comerciales:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>Licencia MIT:</strong> Aplica para el código fuente de la aplicación.</li>
+                <li><strong>Licencia Comercial:</strong> Para el acceso a funcionalidades premium y soporte avanzado.</li>
+            </ul>
+        </section>
+
+        <section id="terms" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Términos y Condiciones</h2>
+            <p>
+                Los Términos y Condiciones regulan el uso de Plannify. Al utilizar la aplicación aceptas:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>No utilizar la aplicación con fines ilegales.</li>
+                <li>Respetar la propiedad intelectual y la privacidad de otros usuarios.</li>
+                <li>Cumplir las políticas de uso establecidas por Plannify.</li>
+            </ul>
+            <p class="mt-4">
+                Te recomendamos leer el documento completo para conocer todos los detalles.
+            </p>
+        </section>
+
+        <section id="privacy" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Privacidad</h2>
+            <p>
+                En Plannify, tu privacidad es fundamental. Nuestra política de privacidad detalla:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Qué datos se recogen y por qué.</li>
+                <li>Cómo se protegen y almacenan tus datos personales.</li>
+                <li>Las opciones que tienes para controlar tu información.</li>
+            </ul>
+            <p class="mt-4">
+                Consulta la política de privacidad completa para obtener información detallada.
+            </p>
+        </section>
+
+        <section id="code-of-conduct" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Código de Conducta</h2>
+            <p>
+                Plannify promueve una comunidad respetuosa e inclusiva. Nuestro Código de Conducta establece:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Respeto mutuo entre usuarios y colaboradores.</li>
+                <li>Comportamiento profesional en todas las interacciones.</li>
+                <li>Mecanismos para reportar y actuar contra conductas inapropiadas.</li>
+            </ul>
+            <p class="mt-4">
+                El incumplimiento de estas normas puede resultar en sanciones o la suspensión de la cuenta.
+            </p>
+        </section>
+
+        <section id="contributing" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Cómo contribuir</h2>
+            <p>
+                Tu colaboración es esencial para mejorar Plannify. Puedes contribuir de las siguientes formas:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>Reportar errores:</strong> Utiliza nuestro sistema de incidencias en GitHub.</li>
+                <li><strong>Enviar mejoras:</strong> Realiza un fork del repositorio, implementa tus cambios y envía un Pull Request.</li>
+                <li><strong>Colaborar en la documentación:</strong> Ayuda a mantener la documentación clara y actualizada.</li>
+            </ul>
+            <p class="mt-4">
+                Consulta nuestras guías de contribución para más detalles sobre el proceso.
+            </p>
+        </section>
+
+        <section id="donations" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Donaciones</h2>
+            <p>
+                Si valoras nuestro trabajo y deseas apoyar el desarrollo de Plannify, considera realizar una donación. Tu ayuda es fundamental para mantener y mejorar la aplicación.
+            </p>
+            <p class="mt-4">
+                Métodos disponibles:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li><strong>PayPal:</strong> <a href="https://www.paypal.me/plannify" class="text-blue-600 hover:underline">paypal.me/plannify</a></li>
+                <li><strong>Patreon:</strong> <a href="https://www.patreon.com/plannify" class="text-blue-600 hover:underline">patreon.com/plannify</a></li>
+            </ul>
+        </section>
+
+        <section id="premium" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Premium</h2>
+            <p>
+                Plannify ofrece una suscripción premium con características avanzadas para usuarios que buscan una experiencia más completa:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Herramientas exclusivas de planificación.</li>
+                <li>Sincronización avanzada entre dispositivos.</li>
+                <li>Soporte prioritario y personalizado.</li>
+                <li>Opciones de personalización completas de la interfaz.</li>
+            </ul>
+            <p class="mt-4">
+                Descubre más sobre las ventajas de la suscripción premium dentro de la aplicación.
+            </p>
+        </section>
+
+        <section id="acknowledgments" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Reconocimientos</h2>
+            <p>
+                Queremos agradecer a todas las personas, comunidades y proyectos que han contribuido al desarrollo de Plannify:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>La comunidad de desarrolladores y colaboradores.</li>
+                <li>Proyectos de código abierto que han inspirado nuestra implementación.</li>
+                <li>A nuestros usuarios por su feedback y apoyo continuo.</li>
+            </ul>
+        </section>
+
+        <section id="disclaimer" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Descargo de responsabilidad</h2>
+            <p>
+                La información proporcionada en esta documentación se ofrece "tal cual" y Plannify no se hace responsable de daños o pérdidas derivadas del uso de la aplicación o de la interpretación de esta documentación.
+            </p>
+            <p class="mt-4">
+                Se recomienda revisar periódicamente la documentación para estar al tanto de posibles actualizaciones o cambios.
+            </p>
+        </section>
+
+        <section id="trademark" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-semibold mb-4">Marca registrada</h2>
+            <p>
+                "Plannify" es una marca registrada de [Nombre de la Empresa]. Todos los derechos reservados. Queda prohibido el uso no autorizado de la marca o su representación sin el consentimiento expreso.
+            </p>
+        </section>
+    </main>
+
+</DocsLayout>
