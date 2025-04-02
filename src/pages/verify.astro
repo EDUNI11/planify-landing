@@ -1,0 +1,72 @@
+---
+import VerifyLayout from "../layouts/VerifyLayout.astro";
+import PlannifyTextLogo from "../components/PlannifyTextLogo.astro";
+---
+
+<VerifyLayout>
+    <article class="max-w-[60%] border-2 border-white/20 rounded-2xl px-16 py-8 mx-auto text-center">
+        <header class="-mb-32 -mt-32">
+            <PlannifyTextLogo className="w-[40%] mx-auto text-[--principal-color]"/>
+        </header>
+        <h1 class="text-3xl">Verificación de Cuenta</h1>
+        <p class="text-sm mt-10">
+            Verifica tu cuenta para continuar con tus planes y reuniones.
+        </p>
+        <p class="text-sm mb-10">
+            Si ya tienes una cuenta, puedes acceder a tu perfil y gestionar tus planes y reuniones.
+            <a class="underline text-blue-600" href="https://plannify.es/Login">Aquí</a>.
+        </p>
+
+        <a
+                id="verify-button"
+                class=`text-black inline-flex gap-x-3 md:hover:scale-105 dark:text-white bg-[--principal-color] border border-black/20 w-fit dark:border-white/20 px-8 py-4 cursor-pointer text-xl rounded-md md:hover:bg-[--principal-color] md:hover:text-white transition-all duration-[.4s]`
+        >
+            Verificar mi cuenta
+        </a>
+    </article>
+</VerifyLayout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const verifyButton = document.getElementById("verify-button");
+
+        if (verifyButton) {
+            verifyButton.addEventListener("click", async () => {
+                const token = new URLSearchParams(window.location.search).get("token");
+
+                if (!token) {
+                    window.location.href = '/404';
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`http://192.168.17.47:3080/api/verification/${token}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Error en la verificación');
+                    }
+
+                    const data = await response.json();
+                    console.log(data);
+
+                    if (data && data.status) {
+                        window.location.href = 'https://plannify.es/Login';
+                    } else {
+                        window.location.href = '/404';
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+        } else {
+            console.error('El botón de verificación no se encontró en el DOM.');
+        }
+    });
+
+</script>
+

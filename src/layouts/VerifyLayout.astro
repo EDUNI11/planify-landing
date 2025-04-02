@@ -1,0 +1,96 @@
+---
+import NavBar from "../components/NavBar.astro";
+const { title } = Astro.props;
+const { active } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <title>Verificación de Cuenta - Plannify</title>
+</head>
+<body class="bg-[--bg-color] flex items-center justify-center min-h-screen">
+<slot />
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Parkinsans:wght@300..800&display=swap');
+    :root {
+        font-family: 'Parkinsans', sans-serif, system-ui;
+
+        color-scheme: light dark;
+
+        h1, h2 {
+            font-family: 'Bebas Neue', sans-serif, system-ui;
+            letter-spacing: 0.15em;
+            font-weight: 400;
+            color: var(--heading-color);
+        }
+
+        h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif, system-ui;
+            font-weight: 400;
+            color: var(--subtitle-color);
+            letter-spacing: 0.1em;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+            background-color: var(--navbar-bg);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        @media (prefers-color-scheme: light) {
+            --principal-color: #297169;
+            --accent-color: #385c79;
+            --bg-color: white;
+            --text-color: black;
+            --subtitle-color: #6B7280;
+            --unselected-text-color: rgb(99, 99, 99);
+            --unselected-text-color-hover: rgb(39, 39, 39);
+            --navbar-bg: rgba(255, 255, 255, 0.65);
+            --heading-color: #297169;
+            body {
+                background-color: var(--bg-color);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            --principal-color: #3BAF94;
+            --accent-color: #2da6fa;
+            --bg-color: #1A1A1A;
+            --text-color: #E8E8E8;
+            --subtitle-color: #A5A5A5;
+            --unselected-text-color: rgb(200, 200, 200);
+            --unselected-text-color-hover: rgb(230, 230, 230);
+            --navbar-bg: rgba(37, 37, 37, 0.85);
+            --heading-color: #4A90E2;
+            body {
+                background-color: var(--bg-color);
+            }
+        }
+    }
+
+
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
